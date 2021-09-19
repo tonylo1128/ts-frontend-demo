@@ -1,0 +1,74 @@
+//input field setup
+
+.login-container input {
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+  transition: all 0.15s ease-in;
+  background: transparent;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+.login-container {
+  display: flex;
+
+  border: 1px solid rgb(128, 128, 128, 0.5);
+  border-radius: 5px;
+
+  width: 50%;
+  min-width: 600px;
+  height: 200px;
+  min-height: 150px;
+
+  align-items: center;
+
+  .left,
+  .right {
+    height: 100%;
+  }
+
+  .left {
+    width: 40%;
+    background-color: antiquewhite;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: 50% 50%;
+      object-fit: cover;
+    }
+  }
+
+  .right {
+    width: 60%;
+    background-color: aqua;
+
+    .username-container,
+    .password-container {
+      display: flex;
+      padding-bottom: 10px;
+    }
+
+    .password-field-container {
+      position: relative;
+
+      .show-hide-pw-btn {
+        content: "";
+        background: red;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        display: block;
+        top: 1px;
+        right: 10px;
+
+        cursor: pointer;
+      }
+    }
+  }
+}

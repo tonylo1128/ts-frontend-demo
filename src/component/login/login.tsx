@@ -7,7 +7,9 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const mindBlowing = require("../../image/login/mindBlowing.gif");
 
-  console.log(mindBlowing.default);
+  function loginApiCall() {
+    console.log("sumbit button clicked");
+  }
 
   return (
     <div
@@ -27,6 +29,7 @@ function Login() {
             <input
               className="username-field"
               onChange={(e) => {
+                console.log(e.target.value);
                 setUserName(e.target.value);
                 console.log(userName);
               }}
@@ -52,6 +55,15 @@ function Login() {
               ></div>
             </div>
           </div>
+        </div>
+
+        <div
+          className="submit-button"
+          onClick={() => {
+            loginApiCall();
+          }}
+        >
+          Submit
         </div>
       </div>
     </div>
